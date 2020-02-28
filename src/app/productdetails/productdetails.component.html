@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <h5>Product Details</h5>
+    <table class="table table-striped table-hover table-bordered" bgcolor="gainsboro">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Brand</th>
+                <th>Availability</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productsData">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.brand}}</td>
+                <td>
+                    <input type = "checkbox" [checked]="product.isavailable"/>
+                </td>
+                <td><a class="btn btn-primary" [routerLink]="['/update',product.id]">Edit</a></td>
+                <td (click)="deleteProduct(product.id)"><a class="btn btn-danger">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>>

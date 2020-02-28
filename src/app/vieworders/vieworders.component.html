@@ -1,0 +1,26 @@
+<div>
+    <h4>Hi, Your orders history shown below:</h4>
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Sl. No</th>
+                <th>Order Id</th>
+                <th>Items</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of ordersHistory;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{order.id}}</td>
+                <td *ngFor="let item of order.items">
+                    <table>
+                        <tr>
+                            <td>{{item.brand}}&nbsp;{{item.name}}&nbsp;{{item.description}}&nbsp;{{item.price}}&nbsp;
+                                Quantity:{{item.quantity}}<br /></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

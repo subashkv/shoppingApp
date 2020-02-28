@@ -1,0 +1,58 @@
+<div class="card col-sm-6">
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Update Product</strong>
+    </h5>
+    <div class="card-body px-lg-5 pt 0">
+        <form class="text-center" style="columns: #757575;" [formGroup]="form" (ngSubmit)="updateProduct()">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="md-form mt-3">
+                        <label>Product Name: </label>
+                        <input type="text" formControlName="productname" class="form-control">
+                    </div><br />
+                    <div class="md-form mt-3">
+                        <label>Product Description: </label>
+                        <input type="text" formControlName="productdescription" class="form-control">
+                    </div><br />
+                    <div class="md-form">
+                        <label>Is product available:</label>
+                        <input type="radio" id="available" name="isproductavailable" value="true">Yes
+                        <input type="radio" id="notavailable" name="isproductavailable" value="false">No
+                    </div>
+                    <div class="md-form mt-3">
+                        <label>Product Price: </label>
+                        <input type="text" formControlName="productprice" class="form-control">
+                    </div><br />
+                    <div class="md-form">
+                        <span>Brand</span>
+                        <select class="mdb-select">
+                            <option *ngFor="let brand of brands" [value]="brand">{{brand}}</option>
+                        </select>
+                    </div>
+                    <div class="md-form mt-3">
+                        <label>Product Image: </label>
+                        <input type="text" formControlName="productimage" class="form-control">
+                    </div><br />
+                    <br />
+                    <button type="submit" class="btn btn-outline-info btn-rounded">Add</button>
+                    <button type="reset" class="btn btn-outline-info btn-rounded">Clear</button>
+                </div>
+                <div class="col-sm-3">
+                    <div *ngIf="!form.valid" class="alert alert-danger">
+                        <div *ngIf="form.get('productname').hasError('required')
+                        && (form.get('productname').touched || form.get('productname').dirty)">
+                            Product Name Can't be empty</div>
+                        <div *ngIf="form.get('empemail').hasError('required') &&
+                        (form.get('empemail').touched || form.get('empemail').dirty)">
+                            Incorrect email format
+                        </div>
+                        <div class="alert alert-danger" *ngIf="form.get('consent').hasError('required') && 
+                            (form.get('consent').touched || form.get('consent').dirty)">
+                            You must accept terms and conditions</div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

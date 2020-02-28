@@ -1,0 +1,373 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Ace J Pro",
+      "description": "3GB",
+      "isavailable": true,
+      "productprice": 9000,
+      "brand": "samsung"
+    },
+    {
+      "id": 2,
+      "name": "Reno 2",
+      "description": "4GB",
+      "isavailable": true,
+      "productprice": 35000,
+      "brand": "oppo"
+    },
+    {
+      "name": "apple",
+      "description": "8GB",
+      "price": "60000",
+      "isavailable": false,
+      "id": 3
+    }
+  ],
+  "customers": [
+    {
+      "id": 100,
+      "name": "Virat Kohli",
+      "address": "india",
+      "email": "virat@india.com",
+      "mobile": 9876543210
+    },
+    {
+      "id": 101,
+      "name": "Rohit Sharma",
+      "address": "india",
+      "email": "rohit@india.com",
+      "mobile": 7896543210
+    },
+    {
+      "name": "shikhar dhawan",
+      "address": "dsdsdsd",
+      "email": "shikhar@india.com",
+      "mobile": "9807654321",
+      "id": 102
+    },
+    {
+      "name": "dsfffdsfd",
+      "address": "ccdfdsfd",
+      "email": "dfdfd",
+      "mobile": "31323321",
+      "id": 103
+    }
+  ],
+  "orders": [
+    {
+      "id": 50,
+      "customerid": 100,
+      "items": [
+        {
+          "id": 2,
+          "brand": "samsung",
+          "name": "Ace J Pro",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 12000,
+          "image": "../../assets/galaxya10.jpg"
+        },
+        {
+          "id": 2,
+          "brand": "samsung",
+          "name": "IPhone 11",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 50000,
+          "image": "../../assets/galaxya10.jpg"
+        }
+      ]
+    },
+    {
+      "customerid": 101,
+      "items": [
+        {
+          "id": 2,
+          "brand": "Samsung",
+          "name": "Galaxy A10",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/galaxya10.jpg"
+        }
+      ],
+      "id": 59
+    },
+    {
+      "customerid": 100,
+      "items": [
+        {
+          "id": 5,
+          "brand": "Oppo",
+          "name": "A5 2020",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/a52020.jpg"
+        }
+      ],
+      "id": 60
+    },
+    {
+      "customerid": 100,
+      "items": [
+        {
+          "id": 2,
+          "brand": "Samsung",
+          "name": "Galaxy A10",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/galaxya10.jpg"
+        },
+        {
+          "id": 1,
+          "brand": "Samsung",
+          "name": "Galaxy M30",
+          "description": "4 GB Ram",
+          "quantity": 1,
+          "price": 15000,
+          "image": "../../assets/galaxym30.jpg"
+        },
+        {
+          "id": 2,
+          "brand": "Samsung",
+          "name": "Galaxy A10",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/galaxya10.jpg"
+        }
+      ],
+      "id": 61
+    },
+    {
+      "customerid": 100,
+      "items": [
+        {
+          "id": 2,
+          "brand": "Samsung",
+          "name": "Galaxy A10",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/galaxya10.jpg"
+        },
+        {
+          "id": 0,
+          "brand": "Samsung",
+          "name": "Ace J Pro",
+          "description": "3 GB Ram",
+          "quantity": 1,
+          "price": 9000,
+          "image": "../../assets/acejpro.jpg"
+        }
+      ],
+      "id": 62
+    },
+    {
+      "customerid": 0,
+      "items": [
+        {
+          "id": 4,
+          "brand": "Oppo",
+          "name": "Reno 2",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/reno2.jpg"
+        },
+        {
+          "id": 3,
+          "brand": "Oppo",
+          "name": "F11 Pro",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/f11pro.jpg"
+        }
+      ],
+      "id": 63
+    },
+    {
+      "customerid": 100,
+      "items": [
+        {
+          "id": 2,
+          "brand": "Samsung",
+          "name": "Galaxy A10",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/galaxya10.jpg"
+        }
+      ],
+      "id": 64
+    },
+    {
+      "customerid": 100,
+      "items": [],
+      "id": 65
+    },
+    {
+      "customerid": 100,
+      "items": [],
+      "id": 66
+    },
+    {
+      "customerid": 100,
+      "items": [],
+      "id": 67
+    },
+    {
+      "customerid": 100,
+      "items": [
+        {
+          "id": 2,
+          "brand": "Samsung",
+          "name": "Galaxy A10",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/galaxya10.jpg"
+        }
+      ],
+      "id": 68
+    },
+    {
+      "customerid": 0,
+      "items": [
+        {
+          "id": 2,
+          "brand": "Samsung",
+          "name": "Galaxy A10",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/galaxya10.jpg"
+        },
+        {
+          "id": 5,
+          "brand": "Oppo",
+          "name": "A5 2020",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/a52020.jpg"
+        }
+      ],
+      "id": 69
+    },
+    {
+      "customerid": 0,
+      "items": [],
+      "id": 70
+    },
+    {
+      "customerid": 0,
+      "items": [],
+      "id": 71
+    },
+    {
+      "customerid": 0,
+      "items": [],
+      "id": 72
+    },
+    {
+      "customerid": 0,
+      "items": [],
+      "id": 73
+    },
+    {
+      "customerid": 0,
+      "items": [],
+      "id": 74
+    },
+    {
+      "customerid": "100",
+      "items": [],
+      "id": 75
+    },
+    {
+      "customerid": "0",
+      "items": [],
+      "id": 76
+    },
+    {
+      "customerid": "100",
+      "items": [
+        {
+          "id": 2,
+          "brand": "Samsung",
+          "name": "Galaxy A10",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/galaxya10.jpg"
+        }
+      ],
+      "id": 77
+    },
+    {
+      "customerid": "100",
+      "items": [
+        {
+          "id": 5,
+          "brand": "Oppo",
+          "name": "A5 2020",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/a52020.jpg"
+        }
+      ],
+      "id": 78
+    },
+    {
+      "customerid": "100",
+      "items": [
+        {
+          "id": 5,
+          "brand": "Oppo",
+          "name": "A5 2020",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/a52020.jpg"
+        }
+      ],
+      "id": 79
+    },
+    {
+      "customerid": "100",
+      "items": [
+        {
+          "id": 2,
+          "brand": "Samsung",
+          "name": "Galaxy A10",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/galaxya10.jpg"
+        }
+      ],
+      "id": 80
+    },
+    {
+      "customerid": "100",
+      "items": [
+        {
+          "id": 5,
+          "brand": "Oppo",
+          "name": "A5 2020",
+          "description": "6 GB Ram",
+          "quantity": 1,
+          "price": 20000,
+          "image": "../../assets/a52020.jpg"
+        }
+      ],
+      "id": 81
+    }
+  ]
+}

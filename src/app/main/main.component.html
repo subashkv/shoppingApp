@@ -1,0 +1,32 @@
+<div>
+    <label>Existing Customer:
+        <div><input type="checkbox" [(ngModel)]="isExistingCustomer"></div>
+    </label>
+</div>
+<div>
+    <label>Customer Name:
+        <div><input type="text" name="customerName" [(ngModel)]="customerName"></div>
+    </label>
+</div>
+<div>
+    <label>Customer Address:
+        <div><input type="text" name="customerAddress" [(ngModel)]="customerAddress"></div>
+    </label>
+</div>
+<div>
+    <label>Customer Mobile:
+        <div><input type="text" name="customerMobile" [(ngModel)]="customerMobile"></div>
+    </label>
+</div>
+<div>
+    <label>Customer Email:
+        <div><input type="text" name="customerEmail" [(ngModel)]="customerEmail"></div>
+    </label>
+</div>
+<div>
+    Deliver to the following adrress:<br/>
+    {{customerName}}<br/>
+    {{customerAddress}}<br/>
+    {{customerMobile}}<br/>
+    {{customerEmail}}
+</div>

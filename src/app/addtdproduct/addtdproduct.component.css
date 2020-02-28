@@ -1,0 +1,13 @@
+
+.zoom {
+    padding: unset;
+    background-color: white;
+    transition: transform .2s;
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(5.0); 
+  }

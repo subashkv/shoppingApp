@@ -1,0 +1,68 @@
+<div>
+    <label>Select a Brand: </label>
+    <span *ngFor="let brand of brands">
+        <input type="radio" name="brand" (click)="showSelctedBrandItems(brand)">{{brand}}
+    </span>
+</div>
+
+<div class = "row">
+    <div class="col-sm-8">
+        <div *ngFor="let mobile of mobileItems" class="d-inline-flex"
+            style="border:1px solid red;padding: 50px;margin:5px;">
+            <div>
+                <figure>
+                    <img src="{{mobile.image}}" [height]="height" [width]="width" />
+                    <figcaption>{{mobile.brand}} {{mobile.name}}</figcaption>
+                    <figcaption>{{mobile.description}}</figcaption>
+                    <figcaption>{{mobile.price | currency:"INR":false}}</figcaption>
+                    <figcaption><input type="text" name="quantity" [(ngModel)]="mobile.quantity" (change)="getTotalPrice()">
+                    </figcaption>
+                    <figcaption>
+                        <input type="checkbox" title="Select this product" (change)="addProduct(mobile)">
+                    </figcaption>
+                    <figcaption><button class="btn-primary" (click)="selectedMobile(mobile, mobile.id)">Add to Cart</button></figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-3" *ngIf="selectedItems.length>0">
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Sl.No</th>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mobile of selectedItems;let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{mobile.brand}} {{mobile.name}}</td>
+                    <td>{{mobile.quantity}}</td>
+                    <td>{{mobile.price*mobile.quantity | currency:"INR"}}</td>
+                </tr>
+                <tr class="bg-info">
+                    <td></td>
+                    <td></td>
+                    <td><b><i>Net Total: </i></b></td>
+                    <td><b><i>{{totalPrice | tax | currency:"INR"}}</i></b></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" [routerLink]="['/customerdetails']">Order Now</button>
+    </div>
+</div>
+
+
+<!--<div *ngFor="let product of productItems" class="d-inline-flex" style="border:1px solid blue;padding: 50px;margin:5px;">
+    <div>
+        <figure>
+            <img src="{{product.image}}" [height]="height" [width]="width" />
+            <figcaption>{{product.brand}} {{product.name}}</figcaption>
+            <figcaption>{{product.description}}</figcaption>
+            <figcaption>{{product.price | currency:"INR"}}</figcaption>
+        </figure>
+    </div>
+</div>-->

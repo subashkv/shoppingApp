@@ -1,0 +1,83 @@
+<h1>Add Product(Template)</h1>
+<div class="row custom-row" style="margin-top: 30px;margin-left: 100px;width:100%">
+    <div class="col-sm-5 custom-container jumbotron">
+        <form class="form-horizontal" #addform="ngForm" (ngSubmit)="addProduct(addform)">
+            <fieldset>
+                <legend>Add Product</legend>
+                <div class="form-group">
+                    <label for="productname">Product Name:&nbsp;</label>
+                    <input type="text" id="productname" name="productname"  minlength="4" maxlength="12" 
+                    placeholder="Enter product name" [ngModel]="product.productname" required #productname="ngModel">
+                </div>
+                <div *ngIf="productname.invalid && (productname.touched || productname.dirty)" class="alert alert-danger">
+                    <div *ngIf="productname.errors?.required else invalid">
+                        Product name is mandatory
+                    </div>
+                    <ng-template #invalid>
+                        Product name must have minimum 4 and maximum 12 characters
+                    </ng-template>
+                </div>
+                <div class="form-group">
+                    <label for="productdescription">Product Description:&nbsp;</label>
+                    <input type="text" id="productdescription" name="productdescription"
+                        placeholder="Enter product description" [ngModel]="product.productdescription" required
+                        #productdescription="ngModel">
+                </div>
+                <div class="form-group">
+                    <label>Is product available:&nbsp;</label>
+                    <input type="radio" id="available" name="isproductavailable" [ngModel]="product.isproductavailable"
+                        required #isproductavailable="ngModel" value="true">Yes
+                    <input type="radio" id="notavailable" name="isproductavailable"
+                        [ngModel]="product.isproductavailable" required #isproductavailable="ngModel" value="false">No
+                </div>
+                <div class="form-group">
+                    <label for="productprice">Product Price:&nbsp;</label>
+                    <input type="text" id="productprice" name="productprice" placeholder="Enter price"
+                        [ngModel]="product.productprice" required #productprice="ngModel"
+                        pattern="^\$(\d{1,3}(\,\d{3})*|(\d+))(\.\d{2})?$">
+                </div>
+                <div class="form-group">
+                    <label>Brand:&emsp;</label>
+                    <select name="productbrand" [ngModel]="product.productbrand">
+                        <option *ngFor="let brand of brands" value="{{brand}}">
+                            {{brand}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="productimage">Product Image:&nbsp;</label>
+                    <input type="text" id="productimage" name="productimage" placeholder="Enter image name"
+                        [ngModel]="product.productimage" #productimage="ngModel">
+                </div>
+                <div class="form-group">
+                    <button type="reset" class="btn btn-danger">Clear</button>&nbsp;
+                    <button type="submit" class="btn btn-info">Submit</button>
+                </div>
+                <div>
+                    {{addform.value|json}}
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="col-sm-5">
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of productDetails">
+                    <td>{{product.productbrand}}</td>
+                    <td>{{product.productname}}</td>
+                    <td>{{product.productdescription}}</td>
+                    <td>{{product.productprice}}</td>
+                    <td><img class="zoom" src="../../assets/{{product.productimage}}.jpg"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

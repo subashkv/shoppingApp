@@ -1,0 +1,46 @@
+<h4>Customer Details</h4>
+<div class="row custom-row" style="margin-top: 30px;margin-left: 100px;width:100%">
+    <div class="col-sm-5 custom-container jumbotron">
+        <form class="text-center" style="columns: #757575;" [formGroup]="form" (ngSubmit)="addCustomer()">
+            <fieldset>
+                <div class="md-form">
+                    <span>Choose Name:</span><br/>
+                    <select class="md-select" (change)="viewCustomer($event)">
+                        <option [value]="0">(New Customer)</option>
+                        <option *ngFor="let data of customerData" [value]="data.name">{{data.name}}</option>
+                    </select>
+                </div>
+                <div class="md-form mt-3">
+                    <label>Name: </label>
+                    <input type="text" formControlName="customername" class="form-control">
+                </div><br />
+                <div *ngIf="form.get('customername').hasError('required')
+                && (form.get('customername').touched || form.get('customername').dirty)">
+                    Customer Name Can't be empty</div>
+                <div class="md-form mt-3">
+                    <label>Address: </label>
+                    <input type="text" formControlName="customeraddress" class="form-control">
+                </div><br />
+                <div *ngIf="form.get('customeraddress').hasError('required')
+                && (form.get('customeraddress').touched || form.get('customeraddress').dirty)">
+                    Address Can't be empty</div>
+                <div class="md-form mt-3">
+                    <label>Email: </label>
+                    <input type="text" formControlName="customeremail" class="form-control">
+                </div><br />
+                <div *ngIf="form.get('customeremail').hasError('required') &&
+                (form.get('customeremail').touched || form.get('customeremail').dirty)">
+                    Invalid email
+                </div>
+                <div class="md-form mt-3">
+                    <label>Mobile: </label>
+                    <input type="text" formControlName="customermobile" class="form-control">
+                </div><br />
+                <div *ngIf="form.get('customermobile').hasError('required')
+                && (form.get('customermobile').touched || form.get('customermobile').dirty)">
+                    Mobile Can't be empty</div>
+                <button type="submit" class="btn btn-outline-info btn-rounded">Proceed</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
